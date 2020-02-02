@@ -1,4 +1,4 @@
-data/logs/
+data/logs/activity.log
 data/mm.db
 config.py
 *.pyc

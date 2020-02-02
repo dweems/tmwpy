@@ -49,7 +49,6 @@ player_node = Player('')
 beingManager = BeingManager()
 ItemLog = utils.ItemLog()
 logger = logging.getLogger('ManaLogger')
-db_manager = SqliteDbManager(config.sqlite3_dbfile)
 
 def main():
     # Use rotating log files.
@@ -182,8 +181,6 @@ def main():
     mapserv.recv(4)
 
     pb = PacketBuffer()
-    db_manager.mapserv = mapserv
-    db_manager.start()
 
     # Map server packet loop
     print "Entering map packet loop\n";
@@ -562,7 +559,6 @@ def main():
 
     # On Disconnect/Exit
     logger.info("Server disconnect.")
-    db_manager.stop()
     mapserv.close()
 
 if __name__ == '__main__':
