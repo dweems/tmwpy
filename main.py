@@ -42,7 +42,6 @@ from net.protocol import *
 from net.packet_out import *
 from player import *
 import utils
-from onlineusers import SqliteDbManager
 
 ItemDB = utils.ItemDB()
 player_node = Player('')
