@@ -1,0 +1,4 @@
+data/logs/
+data/mm.db
+config.py
+*.pyc
